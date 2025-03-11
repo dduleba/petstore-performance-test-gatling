@@ -14,3 +14,5 @@ docker run  --name swaggerapi-petstore3 -d -p 8080:8080 swaggerapi/petstore3:uns
 [stworzenie repozytorium](docs/create_repo.md)
 
 [pierwszy run testów](docs/run_tests_01.md)
+
+[pierwszy run testów](docs/fix_tests_01.md)
