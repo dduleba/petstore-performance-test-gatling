@@ -31,8 +31,6 @@ public class PetStoreSimulation extends Simulation {
 
 
 
-
-5:32
 ScenarioBuilder findPetsByStatusScenario = scenario("Find Pets by Status Scenario")
             .exec(http("Find Pets by Status")
                     .get("/api/v3/pet/findByStatus?status=available")
