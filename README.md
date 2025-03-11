@@ -11,8 +11,14 @@ docker pull swaggerapi/petstore3:unstable
 docker run  --name swaggerapi-petstore3 -d -p 8080:8080 swaggerapi/petstore3:unstable
 ```
 
-[stworzenie repozytorium](docs/create_repo.md)
+[stworzenie repozytorium](docs/00_create_repo.md)
 
-[pierwszy run testów](docs/run_tests_01.md)
+[pierwszy run testów](docs/01_run_tests.md)
 
-[pierwszy run testów](docs/fix_tests_01.md)
+[pierwsze poprawki w tescie](docs/01_fix_tests.md)
+
+[drugi uruchomienie testów](docs/02_run_tests.md)
+
+[drugie poprawki w teście](docs/02_fix_tests.md)
+
+[trzecie uruchomienie testów](docs/03_run_tests.md)
