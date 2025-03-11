@@ -17,8 +17,13 @@ docker run  --name swaggerapi-petstore3 -d -p 8080:8080 swaggerapi/petstore3:uns
 
 [pierwsze poprawki w tescie](docs/01_fix_tests.md)
 
-[drugi uruchomienie testów](docs/02_run_tests.md)
+[drugie uruchomienie testów](docs/02_run_tests.md)
 
 [drugie poprawki w teście](docs/02_fix_tests.md)
 
 [trzecie uruchomienie testów](docs/03_run_tests.md)
+
+
+[podbicie wersji](docs/04_gatling_fix_warnings.md)
+
+[uruchomienie testów](docs/04_run_tests.md)

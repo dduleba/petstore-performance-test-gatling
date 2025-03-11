@@ -24,23 +24,17 @@ public class PetStoreSimulation extends Simulation {
                     .post("/api/v3/pet")
                     .body(ElFileBody("bodies/createPet.json"))
                     .check(status().is(200))
-                    .check(jsonPath("$.id").saveAs("petId"))
-                    .check(bodyString().saveAs("petResponse")))
+                    .check(jsonPath("$.id").saveAs("petId")))
             .exec(session -> {
                 System.out.println("Created Pet ID: " + session.getString("petId"));
-                System.out.println("Pet Response: " + session.getString("petResponse"));
                 return session;
             })
             .pause(2)
             // Krok 2: Pobieranie peta (GET)
             .exec(http("Get Pet by ID")
-                    .get("/api/v3/pet/${petId}")
+                    .get("/api/v3/pet/#{petId}")
                     .check(status().is(200))
-                    .check(bodyString().saveAs("getPetResponse")))
-            .exec(session -> {
-                System.out.println("Get Pet Response: " + session.getString("getPetResponse"));
-                return session;
-            })
+                    .check(jsonPath("$.id").is(session -> session.getString("petId"))))
             .pause(1)
             // Krok 3: Wyszukiwanie petów po statusie
             .exec(http("Find Pets by Status")

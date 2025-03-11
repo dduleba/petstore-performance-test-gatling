@@ -10,8 +10,8 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gatling.version>3.9.5</gatling.version>
-        <gatling-maven-plugin.version>4.3.2</gatling-maven-plugin.version>
+        <gatling.version>3.13.5</gatling.version>
+        <gatling-maven-plugin.version>4.8.1</gatling-maven-plugin.version>
     </properties>
     <dependencies>
         <dependency>
@@ -28,9 +28,14 @@
                 <artifactId>gatling-maven-plugin</artifactId>
                 <version>${gatling-maven-plugin.version}</version>
                 <configuration>
-                    <simulationsFolder>src/test/java</simulationsFolder>
-                    <resultsFolder>target/gatling/results</resultsFolder>
                     <runMultipleSimulations>true</runMultipleSimulations>
+                    <includes>
+                        <include>petstoretest.*Simulation</include>
+                    </includes>
+                    <!-- Opcjonalnie możesz wykluczyć niektóre symulacje -->
+                    <excludes>
+                        <exclude>petstoretest.*StressSimulation</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
