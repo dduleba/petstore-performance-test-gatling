@@ -9,6 +9,8 @@ Przed rozpoczęciem testów startujemy aplikacje:
 ```shell
 docker pull swaggerapi/petstore3:unstable
 docker run  --name swaggerapi-petstore3 -d -p 8080:8080 swaggerapi/petstore3:unstable
+
+mvn gatling:test
 ```
 
 [stworzenie repozytorium](docs/00_create_repo.md)
@@ -27,3 +29,6 @@ docker run  --name swaggerapi-petstore3 -d -p 8080:8080 swaggerapi/petstore3:uns
 [podbicie wersji](docs/04_gatling_fix_warnings.md)
 
 [uruchomienie testów](docs/04_run_tests.md)
+
+
+[popprawaka na nowszą wersje java](docs/05_fix_java.md)
